@@ -1,8 +1,15 @@
 import React from 'react';
 import { Card } from 'flowbite-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 
 export const CustomizedCard = ({ title, imageSrc, price, rating }) => {
+  const location = useLocation();
+  let btnData = "Add To Cart";
+
+  if (location.pathname === '/cart') {
+    btnData = "Remove";
+  }
+
   return (
     <Card imgAlt={title} imgSrc={imageSrc}>
       <Link to="#">
@@ -24,7 +31,7 @@ export const CustomizedCard = ({ title, imageSrc, price, rating }) => {
           className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
           to="#"
         >
-          <p>Add to cart</p>
+          <p>{btnData}</p>
         </Link>
       </div>
     </Card>
