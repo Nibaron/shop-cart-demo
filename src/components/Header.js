@@ -71,7 +71,7 @@ export const Header = () => {
                                 </svg>
                             )}
                         </button>
-                        
+
                         <button
                             onClick={() => setHidden(!hidden)}
                             data-collapse-toggle="navbar-search"
@@ -120,7 +120,7 @@ export const Header = () => {
 
                             <li>
                                 <NavLink
-                                    to="/home/cart"
+                                    to="/cart"
                                     className={({ isActive }) =>
                                         isActive ? activeHeader : inactiveHeader
                                     }
