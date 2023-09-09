@@ -28,7 +28,7 @@ export const CustomizedCard = ({ title, imageSrc, price, rating }) => {
           ${price}
         </span>
         <Link
-          className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          className={`rounded-lg ${btnData === "Remove"? "bg-red-700" :" bg-cyan-700"}  px-5 py-2.5 text-center text-sm font-medium text-white`}
           to="#"
         >
           <p>{btnData}</p>
